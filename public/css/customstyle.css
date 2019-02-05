@@ -1,19 +1,14 @@
-.home-buttons {
-	
+.home-container {
+	height: 100vh;
 }
 
-.home-buttons button {
+.homeM-buttons button {
 	padding: 10px;
 	text-align: center;
 	background-color: white;
 	margin: auto;
-	margin-top: 35px;
-	margin-bottom: 25px;
-	width: 65%;
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+	width: 60%;
 	display: block;
-}
-
-.footer p {
-	display: inline-block;
-	text-align: center;
 }
