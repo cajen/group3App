@@ -1,15 +1,15 @@
 .home-buttons {
-
+	
 }
 
 .home-buttons button {
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 	background-color: white;
 	margin: auto;
-	margin-top: 25px;
+	margin-top: 35px;
 	margin-bottom: 25px;
-	width: 50%;
+	width: 65%;
 	display: block;
 }
 
