@@ -6,6 +6,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var instrRouter = require('./routes/instruments');
+var recordRouter = require('./routes/recordings');
+var profileRouter = require('./routes/profile');
+var helpRouter = require('./routes/help');
+var loginRouter = require('./routes/login');
 var mongoose = require('mongoose');
 
 // connect to a mongodb db hosted on mongolab with mongoose
@@ -37,7 +41,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/instruments', instrRouter);
-
+app.use('/recordings', recordRouter);
+app.use('/profile', profileRouter);
+app.use('/help', helpRouter);
+app.use('/login', loginRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
