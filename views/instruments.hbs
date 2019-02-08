@@ -28,13 +28,18 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Search for...">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
+                        <button class="btn btn-default" type="button" data-name="4">Go!</button>
                     </span>
                 </div><!-- /input-group -->
             </div>
         </div><!-- /.row -->
 
-        {{!-- <h1 class="my-4 text-center text-lg-left">Instruments</h1> --}}
+        {{!-- <div class="row text-center"></div>
+        {{#each instruments}}
+            <a href="#"><img src="{{imageURL}}" class="img-rounded img-thumbnail rounded float-left "
+                    alt="{{name}}"></a>
+        {{/each}}
+        </div> --}}
 
         <div class="row text-center">
             <a href="#"><img src="/images/icons/conga-outline.2x.png" class="img-rounded img-thumbnail rounded float-left "
@@ -87,10 +92,16 @@
 
         <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="container text-center">
-                <button type="button" class="btn btn-dark navbar-btn">Back</button>
-                <button type="button" class="btn btn-default navbar-btn">Home</button>
-                <button type="button" class="btn btn-default navbar-btn">My Recordings</button>
-                <button type="button" class="btn btn-default navbar-btn">Profile</button>
+                {{!-- <noscript>
+                    <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
+                    <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
+                    <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My Recordings</a>
+                    <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
+                </noscript> --}}
+                <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
+                <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
+                <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
+                <button type="button" class="btn btn-default navbar-btn" title="profile" data-name="3">Profile</button>
             </div>
         </nav>
     </main>
@@ -100,6 +111,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/instrument.js"></script>
 </body>
 
 </html>

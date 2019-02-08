@@ -10,21 +10,7 @@ var recordRouter = require('./routes/recordings');
 var profileRouter = require('./routes/profile');
 var helpRouter = require('./routes/help');
 var loginRouter = require('./routes/login');
-var mongoose = require('mongoose');
-
-// connect to a mongodb db hosted on mongolab with mongoose
-mongoose.connect('mongodb://cajen:TMbqdz5eMpLshdV@ds123635.mlab.com:23635/gp3db', {useNewUrlParser: true});
-// This is the db reference
-var db = mongoose.connection;
-
-// Test to see if db is connected ... and it is
-
-// db.collection('inventory').insertOne({
-//   item: 'canvas',
-//   qty: 100,
-//   tags: ['cotton'],
-//   size: { h: 28, w: 35.5, uom: 'cm' }
-// });
+var instPageRouter = require('./routes/instPage');
 
 var app = express();
 
@@ -45,6 +31,7 @@ app.use('/recordings', recordRouter);
 app.use('/profile', profileRouter);
 app.use('/help', helpRouter);
 app.use('/login', loginRouter);
+app.use('/instPage', instPageRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
