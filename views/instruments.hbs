@@ -34,47 +34,13 @@
             </div>
         </div><!-- /.row -->
 
-        {{!-- <div class="row text-center"></div>
-        {{#each instruments}}
-            <a href="#"><img src="{{imageURL}}" class="img-rounded img-thumbnail rounded float-left "
+        <div class="text-center myScreen">
+            {{#each instruments}}
+            <a href="#" class="aThumb" title="{{name}}"><img src="{{imageURL}}" class="img-rounded img-thumbnail rounded float-left "
                     alt="{{name}}"></a>
-        {{/each}}
-        </div> --}}
-
-        <div class="row text-center">
-            <a href="#"><img data-src="holder.js/100x100?text=conga"class="img-rounded img-thumbnail rounded float-left "
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=maraca" class="img-rounded img-thumbnail rounded float-none"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=pan flute" class="img-rounded img-thumbnail rounded float-right"
-                    alt="..."></a>
-        </div>
-
-        <div class="row text-center">
-            <a href="#"><img data-src="holder.js/100x100?text=snare drum" class="img-rounded img-thumbnail rounded float-left"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=tambourine" class="img-rounded img-thumbnail rounded float-none"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=triangle" class="img-rounded img-thumbnail rounded float-right"
-                    alt="..."></a>
-        </div>
-
-        <div class="row text-center">
-            <a href="#"><img data-src="holder.js/100x100?text=goblet drum" class="img-rounded img-thumbnail rounded float-left"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=rainstick" class="img-rounded img-thumbnail rounded float-none"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=cymbal" class="img-rounded img-thumbnail rounded float-right"
-                    alt="..."></a>
-        </div>
-
-        <div class="row text-center">
-            <a href="#"><img data-src="holder.js/100x100?text=cabasa" class="img-rounded img-thumbnail rounded float-left"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=claves" class="img-rounded img-thumbnail rounded float-none"
-                    alt="..."></a>
-            <a href="#"><img data-src="holder.js/100x100?text=More...&theme=vine" class="img-rounded rounded float-right"
-                    alt="..."></a>
+            {{/each}}
+            <a href="#" class="aThumb" title="more"><img data-src="holder.js/106x106?text=More...&theme=vine" class="img-rounded rounded float-right"
+                    alt="more"></a>
         </div>
 
         <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -82,7 +48,8 @@
                 {{!-- <noscript>
                     <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
                     <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My Recordings</a>
+                    <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
+                        Recordings</a>
                     <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
                 </noscript> --}}
                 <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
