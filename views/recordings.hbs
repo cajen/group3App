@@ -7,26 +7,71 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 
+    <link href="/css/customstyle.css" rel="stylesheet">
+
 </head>
 <body>
 	<div class="container">
-        <div>
-            <h1><a href="/">My Recordings Placeholder, click to return to the homescreen</h1>
-        </div>
-
         
 
-        <div>
-
-            
+        <div class="recordList">
+            <ul>
+            {{#each recordingsPlaceholder}}
+                <li>
+                    <div onclick="window.location.href = '#{{id}}';">
+                        <p class="mRTitle">{{title}}</p>
+                            <div>
+                            <div class="mRcolumn">
+                                <p class="mRDate">{{date}}</p>
+                            </div>
+                            <div class="mRcolumn">
+                                <p class="mRLength">{{length}}</p>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </li>
+            {{/each}}
+            </ul>
+                     
         </div>
 
-        
+        <!-- Header here to overlay recordings-->
+        <div class="mRHeader">
+            <h3>My Recordings</h3>
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container text-center">
+                <button class="btn btn-info navbar-btn" onclick="history.back()">Back</button>
+                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/';">Home</button>
+                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/instruments';">Instrument Library</button>
+                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/profile';">Profile</button>
+            </div>
+        </nav>
+
+        {{#each recordingsPlaceholder}}
+            <div id="{{id}}" class="modal hide fade">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>{{title}}</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <!-- audio player goes here -->
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        {{/each}}
 
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
