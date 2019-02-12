@@ -3,10 +3,9 @@
 	<title>My Recordings</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-
     <link href="/css/customstyle.css" rel="stylesheet">
 
 </head>
@@ -18,7 +17,7 @@
             <ul>
             {{#each recordingsPlaceholder}}
                 <li>
-                    <div onclick="window.location.href = '#{{id}}';">
+                    <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" data-title="{{title}}">
                         <p class="mRTitle">{{title}}</p>
                             <div>
                             <div class="mRcolumn">
@@ -28,7 +27,6 @@
                                 <p class="mRLength">{{length}}</p>
                             </div>
                         </div>
-                    </a>
                     </div>
                 </li>
             {{/each}}
@@ -50,28 +48,53 @@
             </div>
         </nav>
 
-        {{#each recordingsPlaceholder}}
-            <div id="{{id}}" class="modal hide fade">
+        
+        <div id="mRModal" class="modal hide" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4>{{title}}</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <audio controls>
+                            <p>Placeholder Audio Test</p>
+                            <source src="audioTest/SampleAudio.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#delModal">Delete</button>
                     </div>
                 </div>
-                <div class="modal-body">
-                    <!-- audio player goes here -->
-                </div>
-                <div class="modal-footer">
-                </div>
+                
             </div>
-        {{/each}}
+        </div>
+
+        <div id="delModal" class="modal hide" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                        <p>Delete? (Your choice doesn't matter for now)</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
 
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <script src="js/myRec.js"></script>
+    </body>
 </html>
