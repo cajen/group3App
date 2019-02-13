@@ -11,6 +11,8 @@ var profileRouter = require('./routes/profile');
 var helpRouter = require('./routes/help');
 var loginRouter = require('./routes/login');
 var instPageRouter = require('./routes/instPage');
+var testPageRouter = require('./routes/test');
+var test2PageRouter = require('./routes/test2');
 
 var app = express();
 
@@ -32,6 +34,8 @@ app.use('/profile', profileRouter);
 app.use('/help', helpRouter);
 app.use('/login', loginRouter);
 app.use('/instPage', instPageRouter);
+app.use('/test', testPageRouter);
+app.use('/test2', test2PageRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
