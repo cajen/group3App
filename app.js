@@ -11,6 +11,7 @@ var profileRouter = require('./routes/profile');
 var helpRouter = require('./routes/help');
 var loginRouter = require('./routes/login');
 var instPageRouter = require('./routes/instPage');
+var recordingPageRouter = require('./routes/recordingPage');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/profile', profileRouter);
 app.use('/help', helpRouter);
 app.use('/login', loginRouter);
 app.use('/instPage', instPageRouter);
+app.use('/recordingPage', recordingPageRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

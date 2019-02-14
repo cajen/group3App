@@ -1,0 +1,24 @@
+.roundbutton{
+	
+	width:20%;
+	height: 100%;
+	border-radius:100px;
+}
+.row {
+	width: 80%;
+	margin-top: 50%;
+
+}
+.containerPad {
+	margin-top: 50%;
+}
+.img{
+	width:80%;
+}
+
+#stopButton{
+	display:none;
+}
+#startButton{
+	display:block;
+}
