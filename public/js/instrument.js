@@ -37,7 +37,7 @@ function btnClick(e) {
             window.history.back();
             break;
         case 1: 
-            window.location.href = '/';
+            window.location.href = '/home';
             break;
         case 2:
             window.location.href = '/recordings';
