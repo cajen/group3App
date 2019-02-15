@@ -69,6 +69,21 @@
             "name": "maracas",
             "description": "An instrument you shake",
             "imageURL": "../images/icons/maraca-outline.2x.png"
+        },
+        {
+            "name": "tambourine",
+            "description": "An instrument you shake",
+            "imageURL": "../images/icons/tambourine-outline.2x.png"
+        },
+        {
+            "name": "maracas",
+            "description": "An instrument you shake",
+            "imageURL": "../images/icons/maraca-outline.2x.png"
+        },
+        {
+            "name": "goblet drum",
+            "description": "An instrument you can hit",
+            "imageURL": "../images/icons/goblet-drum-outline.2x.png"
         }
     ],
     "recordingsPlaceholder": [
