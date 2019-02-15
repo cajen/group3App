@@ -24,9 +24,8 @@ function handleMotion(event) {
     oscillator.type = 'sine';
     gainNode.connect(audioCtx.destination);
     oscillator.start(0);
-    gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.5);
+    gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.8);
   } 
 }
 
 window.addEventListener('devicemotion', handleMotion, true);
-//window.addEventListener('deviceorientation', handleMotion, true);

@@ -17,7 +17,7 @@ function initializePage() {
 	// });
 
     $("button").click(btnClick);
-    $('a').click(thumbClick);
+    //$('a').click(thumbClick);
 	// $("a.thumbnail").click(projectClick);
 
 	// Add any additional listeners here
