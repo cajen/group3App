@@ -1,68 +1,56 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Start Recording</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/roundbutton.css" rel="stylesheet">
+  <title>Start Recording</title>
 
-    
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/roundbutton.css" rel="stylesheet">
+  <script src="/js/holder.min.js"></script>
+</head>
 
-   
-  </head>
+<body class="text-center">
 
-  <body class="text-center">
-   
-    
+
 
   <div class="container containerPad">
-   <!-- <div class="row "> -->
-    <img class="img" src="/images/icons/maraca-outline.2x.png">  
-  <!-- </div> -->
-     <!-- <div class="row"> -->
-      
-   
-  <!-- </div> -->
-</div>
-<div class="container">
-  <button type="button" class="btn btn-danger roundbutton" data-name='4' id="startButton">start
-      
-    </button>
-</div>
-
-<div class="container">
- <button type="button" class="btn btn-success roundbutton" id="stopButton">Stop
- </button>
-   
- 
-
-</div>
+    <img class="img" src="holder.js/206x206?text={{instName}}">
+  </div>
+  
+  <div class="container" id="contId">
+    <button type="button" class="btn btn-danger roundbutton" data-name='4' id="startButton">start</button>
+  </div>
+  
+  <div class="container">
+    <button type="button" class="btn btn-success roundbutton" data-name="5" id="stopButton">Stop</button>
+  </div>
 
 
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container text-center">
-                {{!-- <noscript>
-                    <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
-                        Recordings</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
-                </noscript> --}}
-                <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
-                <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
-                <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
-                <button type="button" class="btn btn-default navbar-btn" title="profile" data-name="3">Profile</button>
-            </div>
-        </nav>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/recordingPage.js"></script>
-  </body>
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container text-center">
+      {{!-- <noscript>
+        <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
+        <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
+        <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
+          Recordings</a>
+        <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
+      </noscript> --}}
+      <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
+      <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
+      <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
+      <button type="button" class="btn btn-default navbar-btn" title="profile" data-name="3">Profile</button>
+    </div>
+  </nav>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/recordingPage.js"></script>
+  <script type="text/javascript" src="/js/accelerometer2.js"></script>
+</body>
 
 </html>

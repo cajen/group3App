@@ -18,11 +18,7 @@
 </head>
 
 <body>
-
-    <header></header>
-
-    <main role="main">
-
+    <div class="container">
         <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-md-9 col-lg-3 col-lg-offset-4">
                 <div class="input-group mb-3">
@@ -36,29 +32,29 @@
 
         <div class="text-center myScreen">
             {{#each instruments}}
-            <a href="#" class="aThumb" title="{{name}}"><img src="{{imageURL}}" class="img-rounded img-thumbnail rounded float-left "
-                    alt="{{name}}"></a>
+            <a href="instPage/{{name}}" class="aThumb" title="{{name}}"><img data-src="holder.js/106x106?text={{name}}"
+                    class="img-rounded img-thumbnail rounded float-left " alt="{{name}}"></a>
             {{/each}}
             <a href="#" class="aThumb" title="more"><img data-src="holder.js/106x106?text=More...&theme=vine" class="img-rounded rounded float-right"
                     alt="more"></a>
         </div>
+    </div>
 
-        <nav class="navbar navbar-default navbar-fixed-bottom">
-            <div class="container text-center">
-                {{!-- <noscript>
-                    <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
-                        Recordings</a>
-                    <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
-                </noscript> --}}
-                <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
-                <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
-                <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
-                <button type="button" class="btn btn-default navbar-btn" title="profile" data-name="3">Profile</button>
-            </div>
-        </nav>
-    </main>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container text-center">
+            {{!-- <noscript>
+                <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
+                <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
+                <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
+                    Recordings</a>
+                <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
+            </noscript> --}}
+            <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
+            <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
+            <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
+            <button type="button" class="btn btn-default navbar-btn" title="profile" data-name="3">Profile</button>
+        </div>
+    </nav>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

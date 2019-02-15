@@ -1,5 +1,4 @@
 .roundbutton{
-	
 	width:20%;
 	height: 100%;
 	border-radius:100px;
@@ -21,4 +20,7 @@
 }
 #startButton{
 	display:block;
+}
+#contID {
+	padding-left: 20%;
 }
