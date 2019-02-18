@@ -1,12 +1,16 @@
 'use strict';
 
+var thisScript = $('script[src*=accelerometer2]');
+var instName = thisScript.attr('data-inst');
+alert(instName);
+
 // create web audio api context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 let yodelBuffer;
 
-window.fetch('/audioTest/13862.mp3')
+window.fetch(`/audioTest/${instName}.mp3`)
   .then(response => response.arrayBuffer())
   .then(arrayBuffer => audioCtx.decodeAudioData(arrayBuffer))
   .then(audioBuffer => {
@@ -14,7 +18,7 @@ window.fetch('/audioTest/13862.mp3')
   });
 
 // Global bindings
-var threshold = 4;
+var threshold = 5;
 var timeout = 100;
 var interval = 0;
 var oldX = null;
