@@ -1,25 +1,34 @@
 <html>
+
 <head>
-	<title>My Recordings</title>
-	<meta charset="utf-8">
+    <title>My Recordings</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
+        crossorigin="anonymous">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="/css/customstyle.css" rel="stylesheet">
 
 </head>
-<body>
-	<div class="container">
-        
 
+<body>
+    <div class="container">
         <div class="recordList">
             <ul>
-            {{#each recordingsPlaceholder}}
                 <li>
-                    <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" data-title="{{title}}">
+                    <a href="#">
+                        <img class="img-rounded" src="{{user.0.imageURL}}" width="50" height="50" alt="{{user.0.name}}" title="{{user.0.name}}">
+                        <h5>{{user.0.name}}</h5>
+                    </a>
+                    <hr>
+                </li>
+                {{#each recordingsPlaceholder}}
+                <li>
+                    <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal"
+                        data-title="{{title}}">
                         <p class="mRTitle">{{title}}</p>
-                            <div>
+                        <div>
                             <div class="mRcolumn">
                                 <p class="mRDate">{{date}}</p>
                             </div>
@@ -29,9 +38,9 @@
                         </div>
                     </div>
                 </li>
-            {{/each}}
+                {{/each}}
             </ul>
-                     
+
         </div>
 
         <!-- Header here to overlay recordings-->
@@ -43,12 +52,13 @@
             <div class="container text-center">
                 <button class="btn btn-info navbar-btn" onclick="history.back()">Back</button>
                 <button class="btn btn-default navbar-btn" onclick="window.location.href = '/home';">Home</button>
-                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/instruments';">Instrument Library</button>
+                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/instruments';">Instrument
+                    Library</button>
                 <button class="btn btn-default navbar-btn" onclick="window.location.href = '/profile';">Profile</button>
             </div>
         </nav>
 
-        
+
         <div id="mRModal" class="modal hide" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -65,14 +75,14 @@
                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#delModal">Delete</button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
 
         <div id="delModal" class="modal hide" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    
+
                     <div class="modal-body">
                         <p>Delete? (Your choice doesn't matter for now)</p>
                     </div>
@@ -81,10 +91,10 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                     </div>
                 </div>
-                
+
             </div>
         </div>
-        
+
 
     </div>
 
@@ -92,9 +102,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
     <script src="js/myRec.js"></script>
-    </body>
+</body>
+
 </html>

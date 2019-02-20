@@ -8,6 +8,13 @@ alert(instName);
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
+var chunks = [];
+// var ac = new AudioContext();
+// var osc = ac.createOscillator();
+var dest = audioCtx.createMediaStreamDestination();
+var mediaRecorder = new MediaRecorder(dest.stream);
+// osc.connect(dest);
+
 let yodelBuffer;
 
 window.fetch(`/audioTest/${instName}.mp3`)
@@ -69,8 +76,12 @@ function handleMotion(event) {
       let source = audioCtx.createBufferSource();
       source.buffer = yodelBuffer;
       source.connect(audioCtx.destination);
+      source.connect(dest);
       source.start();
 
+      $('#startBtn').click(function(event) {
+        alert("record start");
+      })
       // create Oscillator and gain node
       // var oscillator = audioCtx.createOscillator();
       // var gainNode = audioCtx.createGain();
@@ -125,13 +136,14 @@ function btnClick(e) {
       case 3:
           window.location.href = '/profile';
           break;
-      case 4:
-          $("#startButton").hide();
-          $("#stopButton").show();
-          break;
-      case 5:
-          $("#stopButton").hide();
-          $("#startButton").show();
-          break;
+      // case 4:
+      //     $("#startButton").hide();
+
+      //     $("#stopButton").show();
+      //     break;
+      // case 5:
+      //     $("#stopButton").hide();
+      //     $("#startButton").show();
+      //     break;
   };
 }
