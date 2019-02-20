@@ -11,52 +11,17 @@
             "imageURL": "../images/icons/conga-outline.2x.png"
         },
         {
-            "name": "goblet drum",
+            "name": "gobletDrum",
             "description": "An instrument you can hit",
             "imageURL": "../images/icons/goblet-drum-outline.2x.png"
-        },
-        {
-            "name": "pan flute",
-            "description": "An instrument",
-            "imageURL": "../images/icons/pan-flute-outline.2x.png"
-        },
-        {
-            "name": "snare drum",
-            "description": "An instrument you hit",
-            "imageURL": "../images/icons/snare-drum-outline.2x.png"
-        },
-        {
-            "name": "tambourine",
-            "description": "An instrument you shake",
-            "imageURL": "../images/icons/tambourine-outline.2x.png"
-        },
-        {
-            "name": "maracas",
-            "description": "An instrument you shake",
-            "imageURL": "../images/icons/maraca-outline.2x.png"
-        },
-        {
-            "name": "goblet drum",
-            "description": "An instrument you can hit",
-            "imageURL": "../images/icons/goblet-drum-outline.2x.png"
-        },
-        {
-            "name": "snare drum",
-            "description": "An instrument you hit",
-            "imageURL": "../images/icons/snare-drum-outline.2x.png"
         },
         {
             "name": "conga",
-            "description": "An instrument with two drums heads",
+            "description": "An instrument",
             "imageURL": "../images/icons/conga-outline.2x.png"
         },
         {
-            "name": "pan flute",
-            "description": "An instrument",
-            "imageURL": "../images/icons/pan-flute-outline.2x.png"
-        },
-        {
-            "name": "snare drum",
+            "name": "snareDrum",
             "description": "An instrument you hit",
             "imageURL": "../images/icons/snare-drum-outline.2x.png"
         },
@@ -71,17 +36,7 @@
             "imageURL": "../images/icons/maraca-outline.2x.png"
         },
         {
-            "name": "tambourine",
-            "description": "An instrument you shake",
-            "imageURL": "../images/icons/tambourine-outline.2x.png"
-        },
-        {
-            "name": "maracas",
-            "description": "An instrument you shake",
-            "imageURL": "../images/icons/maraca-outline.2x.png"
-        },
-        {
-            "name": "goblet drum",
+            "name": "gobletDrum",
             "description": "An instrument you can hit",
             "imageURL": "../images/icons/goblet-drum-outline.2x.png"
         }
