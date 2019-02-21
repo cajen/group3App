@@ -25,9 +25,9 @@
                 </li>
                 {{#each recordingsPlaceholder}}
                 <li>
-                    <!--    temporarily removing delete function
+                
                     <button class="btn btn-danger delBtn" data-toggle="modal" data-target="#del{{id}}">Delete</button>      
-                    -->
+                    
                     <div class="aRecord" onclick="window.location.href = '#{{id}}';" data-toggle="modal" data-target="#{{id}}" data-title="{{title}}">
                         <p class="mRTitle">{{title}}</p>
 
@@ -55,9 +55,9 @@
                             <div class="modal-footer">
                                 <!--    Temporarily removed delete function
                                 <form id="deleteRec" role="form" method="" action="">
-                                    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
-                                    <a type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
-                                </form>    
+                                    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>-->
+                                <a href="/recordings/delete?id={{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
+                                <!--</form>    
                                 -->
                                 <a type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
                             </div>

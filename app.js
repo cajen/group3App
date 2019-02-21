@@ -15,6 +15,7 @@ var recordingPageRouter = require('./routes/recordingPage');
 var testPageRouter = require('./routes/test');
 var test2PageRouter = require('./routes/test2');
 var homePageRouter = require('./routes/home');
+var deleteR = require('./routes/delRec');
 var hbs = require('hbs');
 
 var app = express();
@@ -43,6 +44,8 @@ app.use('/test', testPageRouter);
 app.use('/test2', test2PageRouter);
 app.use('/home', homePageRouter);
 app.use('/addUser', indexRouter.addUser);
+
+app.get('/recordings/delete', deleteR.deleteRec);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
