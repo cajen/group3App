@@ -51,6 +51,15 @@ function btnClick(e) {
     }
 }
 
+function instInfo() {
+    var x = document.getElementById("infoDisplay");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
 // function projectClick(e) { 
 //     // prevent the page from reloading      
 //     e.preventDefault();
