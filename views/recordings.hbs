@@ -25,10 +25,13 @@
                 </li>
                 {{#each recordingsPlaceholder}}
                 <li>
-                    <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal"
-                        data-title="{{title}}">
+                    <!--    temporarily removing delete function
+                    <button class="btn btn-danger delBtn" data-toggle="modal" data-target="#del{{id}}">Delete</button>      
+                    -->
+                    <div class="aRecord" onclick="window.location.href = '#{{id}}';" data-toggle="modal" data-target="#{{id}}" data-title="{{title}}">
                         <p class="mRTitle">{{title}}</p>
-                        <div>
+
+                            <div>
                             <div class="mRcolumn">
                                 <p class="mRDate">{{date}}</p>
                             </div>
@@ -37,8 +40,33 @@
                             </div>
                         </div>
                     </div>
+                    
+                        
+
                 </li>
-                {{/each}}
+
+                <div id="del{{id}}" class="modal hide delConfirm" role="dialog" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            
+                            <div class="modal-body">
+                                <p class="rec-to-del">You are about to delete {{title}}.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <!--    Temporarily removed delete function
+                                <form id="deleteRec" role="form" method="" action="">
+                                    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
+                                    <a type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
+                                </form>    
+                                -->
+                                <a type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            {{/each}}
             </ul>
 
         </div>
@@ -59,41 +87,29 @@
         </nav>
 
 
-        <div id="mRModal" class="modal hide" role="dialog" tabindex="-1">
+        {{#each recordingsPlaceholder}}
+        <div id={{id}} class="modal hide mRModal" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Title</h4>
+                        <h4 class="modal-title">{{title}}</h4>
                     </div>
                     <div class="modal-body">
                         <audio controls>
-                            <p>Placeholder Audio Test</p>
                             <source src="audioTest/SampleAudio.mp3" type="audio/mpeg">
                         </audio>
                     </div>
+                    <!--    moved delete function to button
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#delModal">Delete</button>
+                        <button type="button" class="btn btn-info" data-to-del="{{title}}" data-toggle="modal" data-target="#delRec">Delete</button>
                     </div>
+                -->
                 </div>
-
+                
             </div>
         </div>
 
-        <div id="delModal" class="modal hide" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-
-                    <div class="modal-body">
-                        <p>Delete? (Your choice doesn't matter for now)</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        {{/each}}
 
 
     </div>
@@ -109,6 +125,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
         crossorigin="anonymous"></script>
     <script src="js/myRec.js"></script>
+
 </body>
 
 </html>
