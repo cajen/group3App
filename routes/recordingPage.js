@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var data = require('../data.json');
 
 /* GET home page. */
 router.get('/:name', function(req, res, next) {
@@ -9,4 +10,18 @@ router.get('/:name', function(req, res, next) {
   });
 });
 
+router.addRecording = function(req, res) {
+  let num = Math.floor((Math.random() * 10) + 1);
+  let recording = {
+    'title' : req.query.title,
+    'recUrl' : req.query.recURL,
+    'date' : req.query.date,
+    'length' : req.query.length,
+    'id' : num
+  };
+
+  console.log(recording);
+  data.recordingsPlaceholder.push(recording);
+  res.render('recordings', data);
+}
 module.exports = router;

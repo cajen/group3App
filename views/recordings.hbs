@@ -28,7 +28,9 @@
                 
                     <button class="btn btn-danger delBtn" data-toggle="modal" data-target="#del{{id}}">Delete</button>      
                     
-                    <div class="aRecord" onclick="window.location.href = '#{{id}}';" data-toggle="modal" data-target="#{{id}}" data-title="{{title}}">
+                    <div class="aRecord" onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" data-title="{{title}}" data-url="{{recUrl}}">
+                    {{!-- <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" --}}
+                        {{!-- data-title="{{title}}" data-url="{{recUrl}}"> --}}
                         <p class="mRTitle">{{title}}</p>
 
                             <div>
@@ -40,9 +42,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                        
-
                 </li>
 
                 <div id="del{{id}}" class="modal hide delConfirm" role="dialog" tabindex="-1">
@@ -53,12 +52,8 @@
                                 <p class="rec-to-del">You are about to delete {{title}}.</p>
                             </div>
                             <div class="modal-footer">
-                                <!--    Temporarily removed delete function
-                                <form id="deleteRec" role="form" method="" action="">
-                                    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>-->
-                                <a href="/recordings/delete?id={{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
-                                <!--</form>    
-                                -->
+                                <a href="/delete?id={{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
+                                
                                 <a type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
                             </div>
                         </div>
@@ -82,21 +77,22 @@
                 <button class="btn btn-default navbar-btn" onclick="window.location.href = '/home';">Home</button>
                 <button class="btn btn-default navbar-btn" onclick="window.location.href = '/instruments';">Instrument
                     Library</button>
-                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/profile';">Profile</button>
+                {{!-- <button class="btn btn-default navbar-btn" onclick="window.location.href = '/profile';">Profile</button> --}}
             </div>
         </nav>
 
 
-        {{#each recordingsPlaceholder}}
-        <div id={{id}} class="modal hide mRModal" role="dialog" tabindex="-1">
+        {{!-- {{#each recordingsPlaceholder}} --}}
+        <div id='mRModal' class="modal" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">{{title}}</h4>
                     </div>
                     <div class="modal-body">
-                        <audio controls>
-                            <source src="audioTest/SampleAudio.mp3" type="audio/mpeg">
+                        <audio controls id="modal-aud">
+                            <p>Placeholder Audio Test</p>
+                            <source src="" type="audio/ogg">
                         </audio>
                     </div>
                     <!--    moved delete function to button
@@ -109,7 +105,7 @@
             </div>
         </div>
 
-        {{/each}}
+        {{!-- {{/each}} --}}
 
 
     </div>

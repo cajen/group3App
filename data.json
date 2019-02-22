@@ -3,99 +3,60 @@
         {
             "name": "maracas",
             "description": "An instrument you shake",
-            "imageURL": "../images/icons/maraca-outline.2x.png"
+            "imageURL": "../images/icons/maraca-outline.2x.png",
+            "moreInfo": "Latin American percussion instrument consisting of a hollow-gourd rattle containing pebbles or beans and often played in pairs, as a rhythm instrument Players hold them by their handles, usually in pairs, and shake them. Traditional maracas consist of hollow balls made from dried gourd shell or coconut shell filled with seeds or dried beans and mounted on a wooden handle. Modern maraca balls are also made of leather, wood, or plastic."
+
         },
         {
             "name": "conga",
             "description": "An instrument with two drums heads",
-            "imageURL": "../images/icons/conga-outline.2x.png"
+            "imageURL": "../images/icons/conga-outline.2x.png",
+            "moreInfo": "The term conga refers to the music groups within Cuban comparsas and the music they play. Comparsas are large ensembles of musicians, singers and dancers with a specific costume and choreography which perform in the street carnivals of Santiago de Cuba and Havana.[1][2]The instrumentation differs between congas santiagueras and congas habaneras. Congas santiagueras include the corneta china (Chinese cornet), which is an adaptation of the Cantonese suona introduced in Oriente in 1915, and its percussion section comprises bocúes (similar to African ashiko drums), the quinto (highest pitched conga drum), galletas and the pilón, as well as brakes which are struck with metal sticks.[1] Congas habaneras lack the corneta china but include trumpets, trombones and saxophones, and they have a different set of percussion instruments: redoblantes (side drums), bombos (bass drums), quinto, tumbadora (the lowest pitched conga drum), and metallic idiophones such as cowbells, spoons, frying pans and rims.[1]Congas and comparsas have a long history which dates back to the 19th century, with musical traditions being passed down from one generation to the next. The older comparsas are derived from cabildos de nación or other social groups, whereas the later ones, called paseos, are derived from barrios (neighbourhoods).[2] The music of the congas has become a genre itself, being introduced into Cuban popular music in the early 20th century by artists such as Eliseo Grenet and Armando Oréfiche and his Havana Cuban Boys.[3] They have been present for decades in the repertoire of many conjuntos, Cuban big bands and descarga ensembles, also having an influence on modern genres such as salsa and songo. The conga drum, also known in Cuba as tumbadora, took its name from the congas de comparsa."
+
         },
         {
             "name": "gobletDrum",
             "description": "An instrument you can hit",
-            "imageURL": "../images/icons/goblet-drum-outline.2x.png"
+            "imageURL": "../images/icons/goblet-drum-outline.2x.png",
+            "moreInfo":"The goblet drum (also chalice drum, tarabuka, tarabaki, darbuka, derbake, debuka, doumbek, dumbec, dumbeg, dumbelek, tablah, tableh, toumperleki or zerbaghali,[1] Arabic: دربوكة / ALA-LC: darbūkah) is a single head membranophone with a goblet shaped body used mostly in Egypt, the Middle East, North Africa, the Levant, South Asia, and Eastern Europe.[2] The African djembe-wassolou is also a goblet membranophone.[3] This article focuses on the Eastern and North-African goblet drum The origin of the Egyptian Arabic term darabukka probably lies in the Arabic word 'darab' ('to strike'). Goblet drums were seen in Babylonia and Sumer. They date from as early as 1100 BCE. On Celebes, one large form serves as a temple instrument, set on the floor when performed, which could be a survival of the ancient use of the drum.[4]"
+
         },
         {
             "name": "conga",
             "description": "An instrument",
-            "imageURL": "../images/icons/conga-outline.2x.png"
+            "imageURL": "../images/icons/conga-outline.2x.png",
+            "moreInfo": "The term conga refers to the music groups within Cuban comparsas and the music they play. Comparsas are large ensembles of musicians, singers and dancers with a specific costume and choreography which perform in the street carnivals of Santiago de Cuba and Havana.[1][2]The instrumentation differs between congas santiagueras and congas habaneras. Congas santiagueras include the corneta china (Chinese cornet), which is an adaptation of the Cantonese suona introduced in Oriente in 1915, and its percussion section comprises bocúes (similar to African ashiko drums), the quinto (highest pitched conga drum), galletas and the pilón, as well as brakes which are struck with metal sticks.[1] Congas habaneras lack the corneta china but include trumpets, trombones and saxophones, and they have a different set of percussion instruments: redoblantes (side drums), bombos (bass drums), quinto, tumbadora (the lowest pitched conga drum), and metallic idiophones such as cowbells, spoons, frying pans and rims.[1]Congas and comparsas have a long history which dates back to the 19th century, with musical traditions being passed down from one generation to the next. The older comparsas are derived from cabildos de nación or other social groups, whereas the later ones, called paseos, are derived from barrios (neighbourhoods).[2] The music of the congas has become a genre itself, being introduced into Cuban popular music in the early 20th century by artists such as Eliseo Grenet and Armando Oréfiche and his Havana Cuban Boys.[3] They have been present for decades in the repertoire of many conjuntos, Cuban big bands and descarga ensembles, also having an influence on modern genres such as salsa and songo. The conga drum, also known in Cuba as tumbadora, took its name from the congas de comparsa."
+
         },
         {
             "name": "snareDrum",
             "description": "An instrument you hit",
-            "imageURL": "../images/icons/snare-drum-outline.2x.png"
+            "imageURL": "../images/icons/snare-drum-outline.2x.png",
+            "moreInfo": "A snare drum or side drum is a percussion instrument that produces a sharp staccato sound when the head is struck with a drum stick, due to the use of a series of stiff wires held under tension against the lower skin. Snare drums are often used in orchestras, concert bands, marching bands, parades, drumlines, drum corps, and more. It is one of the central pieces in a drum set, a collection of percussion instruments designed to be played by a seated drummer, which is used in many genres of music. Snare drums are usually played with drum sticks, but other beaters such as the brush or the rute can be used to achieve very different sounds. The snare drum is a versatile and expressive percussion instrument due to its sensitivity and responsiveness. The sensitivity of the snare drum allows it to respond audibly to the softest strokes, even with a wire brush; as well, it can be used for complex rhythmic patterns and engaging solos at moderate volumes. Its high dynamic range allows the player to produce powerful accents with vigorous strokes and a thundering crack (120+ dB) when rimshot strokes are used.The snare drum originates from the tabor, a drum first used to accompany the flute. The tabor evolved into more modern versions, such as the kit snare, marching snare, tarol snare, and piccolo snare.[1] Each type presents a different style of percussion and size. The snare drum that one might see in a popular music concert is usually used in a backbeat style to create rhythm. In marching bands, it can do the same but is used mostly for a front beat.[citation needed] In comparison with the marching snare, the kit snare is generally smaller in length, while the piccolo is the smallest of the three. The snare drum is easily recognizable by its loud cracking sound when struck firmly with a drumstick or mallet. The depth of the sound varies from snare to snare because of the different techniques and construction qualities of the drum. Some of these qualities are head material and tension, dimensions, and rim and drum shell materials and construction."
         },
         {
             "name": "tambourine",
             "description": "An instrument you shake",
-            "imageURL": "../images/icons/tambourine-outline.2x.png"
+            "imageURL": "../images/icons/tambourine-outline.2x.png",
+            "moreInfo":"The tambourine is a musical instrument in the percussion family consisting of a frame, often of wood or plastic, with pairs of small metal jingles, called 'zills'. Classically the term tambourine denotes an instrument with a drumhead, though some variants may not have a head at all. Tambourines are often used with regular percussion sets. They can be mounted, for example on a stand as part of a drum kit (and played with drum sticks), or they can be held in the hands and played by tapping or hitting the instrument.Tambourines come in many shapes with the most common being circular. It is found in many forms of music: Turkish folk music, Greek folk music, Italian folk music, classical music, Persian music, samba, gospel music, pop music, country music, and rock music."
         },
         {
             "name": "maracas",
             "description": "An instrument you shake",
-            "imageURL": "../images/icons/maraca-outline.2x.png"
+            "imageURL": "../images/icons/maraca-outline.2x.png",
+            "moreInfo": "Latin American percussion instrument consisting of a hollow-gourd rattle containing pebbles or beans and often played in pairs, as a rhythm instrument Players hold them by their handles, usually in pairs, and shake them. Traditional maracas consist of hollow balls made from dried gourd shell or coconut shell filled with seeds or dried beans and mounted on a wooden handle. Modern maraca balls are also made of leather, wood, or plastic."
+
         },
         {
             "name": "gobletDrum",
             "description": "An instrument you can hit",
-            "imageURL": "../images/icons/goblet-drum-outline.2x.png"
+            "imageURL": "../images/icons/goblet-drum-outline.2x.png",
+            "moreInfo":"The goblet drum (also chalice drum, tarabuka, tarabaki, darbuka, derbake, debuka, doumbek, dumbec, dumbeg, dumbelek, tablah, tableh, toumperleki or zerbaghali,[1] Arabic: دربوكة / ALA-LC: darbūkah) is a single head membranophone with a goblet shaped body used mostly in Egypt, the Middle East, North Africa, the Levant, South Asia, and Eastern Europe.[2] The African djembe-wassolou is also a goblet membranophone.[3] This article focuses on the Eastern and North-African goblet drum The origin of the Egyptian Arabic term darabukka probably lies in the Arabic word 'darab' ('to strike'). Goblet drums were seen in Babylonia and Sumer. They date from as early as 1100 BCE. On Celebes, one large form serves as a temple instrument, set on the floor when performed, which could be a survival of the ancient use of the drum.[4]"
+
+            
+
         }
     ],
-    "recordingsPlaceholder": [
-        {
-            "title": "Drum",
-            "date": "1/25/19",
-            "length": "1:05",
-            "id": "mR1"
-        },
-        {
-            "title": "Drum 2",
-            "date": "1/25/19",
-            "length": "1:11",
-            "id": "mR2"
-        },
-        {
-            "title": "Triangle",
-            "date": "1/30/19",
-            "length": "1:01",
-            "id": "mR3"
-        },
-        {
-            "title": "Maraca",
-            "date": "2/2/19",
-            "length": "2:54",
-            "id": "mR4"
-        },
-        {
-            "title": "Maraca Solo",
-            "date": "2/10/19",
-            "length": "1:20",
-            "id": "mR5"
-        },
-        {
-            "title": "Drum 3",
-            "date": "1/25/19",
-            "length": "1:05",
-            "id": "mR6"
-        },
-        {
-            "title": "Drum Solo",
-            "date": "2/11/19",
-            "length": "2:10",
-            "id": "mR7"
-        },
-        {
-            "title": "Maraca 2",
-            "date": "2/11/19",
-            "length": "0:47",
-            "id": "mR8"
-        },
-        {
-            "title": "Tambourine",
-            "date": "2/11/19",
-            "length": "0:31",
-            "id": "mR9"
-        }
-    ],
+    "recordingsPlaceholder": [],
     "user" : []
 }
