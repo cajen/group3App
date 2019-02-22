@@ -11,11 +11,13 @@ router.get('/:name', function(req, res, next) {
 });
 
 router.addRecording = function(req, res) {
+  let num = Math.floor((Math.random() * 10) + 1);
   let recording = {
     'title' : req.query.title,
     'recUrl' : req.query.recURL,
     'date' : req.query.date,
-    'length' : req.query.length
+    'length' : req.query.length,
+    'id' : num
   };
 
   console.log(recording);

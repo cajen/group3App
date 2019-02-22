@@ -28,9 +28,9 @@
                 
                     <button class="btn btn-danger delBtn" data-toggle="modal" data-target="#del{{id}}">Delete</button>      
                     
-                    <div class="aRecord" onclick="window.location.href = '#{{id}}';" data-toggle="modal" data-target="#{{id}}" data-title="{{title}}">
-                    <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal"
-                        data-title="{{title}}" data-url="{{recUrl}}">
+                    <div class="aRecord" onclick="window.location.href = '#{{id}}';" data-toggle="modal" data-target="#{{id}}" data-title="{{title}}" data-url="{{recUrl}}">
+                    {{!-- <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" --}}
+                        {{!-- data-title="{{title}}" data-url="{{recUrl}}"> --}}
                         <p class="mRTitle">{{title}}</p>
 
                             <div>
@@ -42,9 +42,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                        
-
                 </li>
 
                 <div id="del{{id}}" class="modal hide delConfirm" role="dialog" tabindex="-1">
@@ -55,7 +52,7 @@
                                 <p class="rec-to-del">You are about to delete {{title}}.</p>
                             </div>
                             <div class="modal-footer">
-                                <a href="/recordings/delete?id={{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
+                                <a href="/delete?id={{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
                                 
                                 <a type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
                             </div>
