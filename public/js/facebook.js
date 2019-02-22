@@ -27,6 +27,6 @@ function changeUser(response) {
     console.log('changeUser called');
     $('#name').val(response.name);
     $('#picURL').val(response.picture.data.url);
-    alert(response.name);
+    //alert(response.name);
     $('#form').submit();
 }

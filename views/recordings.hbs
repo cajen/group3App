@@ -26,7 +26,7 @@
                 {{#each recordingsPlaceholder}}
                 <li>
                     <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal"
-                        data-title="{{title}}">
+                        data-title="{{title}}" data-url="{{recUrl}}">
                         <p class="mRTitle">{{title}}</p>
                         <div>
                             <div class="mRcolumn">
@@ -66,9 +66,9 @@
                         <h4 class="modal-title">Title</h4>
                     </div>
                     <div class="modal-body">
-                        <audio controls>
+                        <audio controls id="modal-aud">
                             <p>Placeholder Audio Test</p>
-                            <source src="audioTest/SampleAudio.mp3" type="audio/mpeg">
+                            <source src="" type="audio/ogg">
                         </audio>
                     </div>
                     <div class="modal-footer">

@@ -43,6 +43,7 @@ app.use('/test', testPageRouter);
 app.use('/test2', test2PageRouter);
 app.use('/home', homePageRouter);
 app.use('/addUser', indexRouter.addUser);
+app.use('/addRecording',recordingPageRouter.addRecording);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

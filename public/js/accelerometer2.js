@@ -2,7 +2,7 @@
 
 var thisScript = $('script[src*=accelerometer2]');
 var instName = thisScript.attr('data-inst');
-alert(instName);
+//alert(instName);
 
 // create web audio api context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -32,6 +32,8 @@ var oldX = null;
 var oldY = null;
 var oldZ = null;
 var oldTime = new Date();
+var clicked = false;
+var firstShake = true;
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function () {
@@ -42,9 +44,81 @@ $(document).ready(function () {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-  $("button").click(btnClick);
-  console.log("Javascript connected!");
+  function reset() {
+    oldTime = new Date();
+    oldX = null;
+    oldY = null;
+    oldZ = null;
+    start = false;
+  };
+  
+  function start() {
+    reset();
+    window.addEventListener('devicemotion', handleMotion, true);
+  };
+
   start();
+  $('#startBtn').hide();
+  $('#save').hide();
+  $('#audioCont').hide();
+  $('.Fbtn').click(btnClick);
+  console.log("Javascript connected!");
+
+  $('#modClose').click(function() {
+    window.location.href = `/recordingPage/${instName}`;
+  });
+
+  $('#modSave').click(function() {
+    let title = $('#recordName').val();
+    let myUrl = $('audio').attr('src');
+    let date = new Date();
+    let aud = document.getElementById('audioCont');
+    let length = aud.duration;
+
+    $('#title').val(title);
+    $('#recURL').val(myUrl);
+    $('#date').val(date.toDateString());
+    $('#length').val(length);
+    $('#form').submit();
+  });
+
+  $(document).on('click', '#startBtn', function () {
+    if (!clicked) {
+      mediaRecorder.start()
+      $(this).html('Stop');
+      clicked = true;
+    } else {
+      $(this).hide();
+      $('#save').show();
+      $('#audioCont').show();
+      
+      mediaRecorder.requestData();
+      mediaRecorder.stop();
+      source.stop();
+      clicked = false;
+    }
+  });
+
+  $('#strBtn').click(function() {
+    $('#contId2').hide();
+    $('.containerPad').show();
+  });
+
+  // $('#startBtn').click(function(event) {
+  //   if (!clicked) {
+  //     mediaRecorder.start()
+  //     $(this).html('Stop');
+  //     $(this).attr('data-target', '#exampleModal');
+  //     clicked = true;
+  //   } else {
+  //     $(this).html('Start');
+  //     // $(this).hide();
+  //     mediaRecorder.requestData();
+  //     mediaRecorder.stop();
+  //     source.stop();
+  //     clicked = false;
+  //   }
+  // });
 }
 
 function handleMotion(event) {
@@ -73,26 +147,15 @@ function handleMotion(event) {
 
     if (timeDiff > timeout) {
 
-      let source = audioCtx.createBufferSource();
+      if (firstShake) {
+        $('#startBtn').show();
+        firstShake = false;
+      }
+      var source = audioCtx.createBufferSource();
       source.buffer = yodelBuffer;
       source.connect(audioCtx.destination);
       source.connect(dest);
       source.start();
-
-      $('#startBtn').click(function(event) {
-        alert("record start");
-      })
-      // create Oscillator and gain node
-      // var oscillator = audioCtx.createOscillator();
-      // var gainNode = audioCtx.createGain();
-
-      // // connect oscillator to gain node to speakers
-
-      // oscillator.connect(gainNode);
-      // oscillator.type = 'sine';
-      // gainNode.connect(audioCtx.destination);
-      // oscillator.start(0);
-      // gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.8);
 
       oldTime = new Date();
     }
@@ -103,17 +166,17 @@ function handleMotion(event) {
   oldZ = acc.z;
 }
 
-function reset() {
-  oldTime = new Date();
-  oldX = null;
-  oldY = null;
-  oldZ = null;
-}
-
-function start() {
-  reset();
-  window.addEventListener('devicemotion', handleMotion, true);
-}
+mediaRecorder.ondataavailable = function(evt) {
+  // push each chunk (blobs) in an array
+  chunks.push(evt.data);
+};
+mediaRecorder.onstop = function(evt) {
+  // Make blob out of our blobs, and open it.
+  var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  var audioTag = document.createElement('audio');
+  document.querySelector("audio").src = URL.createObjectURL(blob);
+  //alert(URL.createObjectURL(blob));
+};
 
 function stop() {
   window.removeEventListener('devicemotion', handleMotion, true);
