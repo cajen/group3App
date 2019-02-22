@@ -17,29 +17,62 @@
 
 <body class="text-center">
 
-
-
   <div class="container containerPad">
     <img class="img" src="holder.js/206x206?text={{instName}}">
   </div>
-  
-  <div class="container" id="contId">
-    <button id="startBtn" type="button" class="btn btn-danger roundbutton" data-name='4' id="startButton">start</button>
+
+  <div class="container" id="contId2">
+    <button id="strBtn" type="button" class="btn btn-success btn-lg" data-name='8' style="margin-top:70%">Start</button>
   </div>
+
+  <div class="container" id="contId">
+    <button id="startBtn" type="button" class="btn btn-danger btn-lg" data-name='4'>Record</button>
+  </div>
+
+  <audio id="audioCont" controls style="margin-bottom: 5% ; margin-top: 5%"></audio>
+
+
+  <div class="container" id="save">
+    <button id="saveBtn" type="button" class="btn btn-primary btn-lg" data-name='6' data-target="#exampleModal"
+      data-toggle="modal">Save</button>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Save Recording</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input id="recordName" type="text" class="form-control" placeholder="Recording name" aria-label="recordName"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="modal-footer">
+          <button id="modClose" type="button" class="btn btn-secondary modBtn" data-dismiss="modal">Close</button>
+          <button id="modSave" type="button" class="btn btn-primary modBtn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form style="display: hidden" action="/addRecording" method="get" id="form">
+    <input type="hidden" id="title" name="title" value="" />
+    <input type="hidden" id="recURL" name="recURL" value="" />
+    <input type="hidden" id="date" name="date" value="" />
+    <input type="hidden" id="length" name="length" value="" />
+  </form>
 
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container text-center">
-      {{!-- <noscript>
-        <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
-        <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
-        <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
-          Recordings</a>
-        <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
-      </noscript> --}}
-      <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
-      <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
-      <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
-      <button type="button" class="btn btn-default navbar-btn" title="profile" data-name="3">Profile</button>
+      <button type="button" class="btn btn-info navbar-btn Fbtn" title="back" data-name="0">Back</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="home" data-name="1">Home</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="2">My
+        Recordings</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="profile" data-name="3">Profile</button>
     </div>
   </nav>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

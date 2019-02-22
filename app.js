@@ -46,6 +46,7 @@ app.use('/home', homePageRouter);
 app.use('/addUser', indexRouter.addUser);
 
 app.get('/recordings/delete', deleteR.deleteRec);
+app.use('/addRecording',recordingPageRouter.addRecording);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
