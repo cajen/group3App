@@ -52,9 +52,12 @@
             "description": "An instrument you can hit",
             "imageURL": "../images/icons/goblet-drum-outline.2x.png",
             "moreInfo":"The goblet drum (also chalice drum, tarabuka, tarabaki, darbuka, derbake, debuka, doumbek, dumbec, dumbeg, dumbelek, tablah, tableh, toumperleki or zerbaghali,[1] Arabic: دربوكة / ALA-LC: darbūkah) is a single head membranophone with a goblet shaped body used mostly in Egypt, the Middle East, North Africa, the Levant, South Asia, and Eastern Europe.[2] The African djembe-wassolou is also a goblet membranophone.[3] This article focuses on the Eastern and North-African goblet drum The origin of the Egyptian Arabic term darabukka probably lies in the Arabic word 'darab' ('to strike'). Goblet drums were seen in Babylonia and Sumer. They date from as early as 1100 BCE. On Celebes, one large form serves as a temple instrument, set on the floor when performed, which could be a survival of the ancient use of the drum.[4]"
-
-            
-
+        },
+        {
+            "name": "tambourine",
+            "description": "An instrument you shake",
+            "imageURL": "../images/icons/tambourine-outline.2x.png",
+            "moreInfo":"The tambourine is a musical instrument in the percussion family consisting of a frame, often of wood or plastic, with pairs of small metal jingles, called 'zills'. Classically the term tambourine denotes an instrument with a drumhead, though some variants may not have a head at all. Tambourines are often used with regular percussion sets. They can be mounted, for example on a stand as part of a drum kit (and played with drum sticks), or they can be held in the hands and played by tapping or hitting the instrument.Tambourines come in many shapes with the most common being circular. It is found in many forms of music: Turkish folk music, Greek folk music, Italian folk music, classical music, Persian music, samba, gospel music, pop music, country music, and rock music."
         }
     ],
     "recordingsPlaceholder": [],
