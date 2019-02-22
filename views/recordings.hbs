@@ -28,7 +28,7 @@
                 
                     <button class="btn btn-danger delBtn" data-toggle="modal" data-target="#del{{id}}">Delete</button>      
                     
-                    <div class="aRecord" onclick="window.location.href = '#{{id}}';" data-toggle="modal" data-target="#{{id}}" data-title="{{title}}" data-url="{{recUrl}}">
+                    <div class="aRecord" onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" data-title="{{title}}" data-url="{{recUrl}}">
                     {{!-- <div onclick="window.location.href = '#mRModal';" data-toggle="modal" data-target="#mRModal" --}}
                         {{!-- data-title="{{title}}" data-url="{{recUrl}}"> --}}
                         <p class="mRTitle">{{title}}</p>
@@ -82,8 +82,8 @@
         </nav>
 
 
-        {{#each recordingsPlaceholder}}
-        <div id={{id}} class="modal hide mRModal" role="dialog" tabindex="-1">
+        {{!-- {{#each recordingsPlaceholder}} --}}
+        <div id='mRModal' class="modal" role="dialog" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        {{/each}}
+        {{!-- {{/each}} --}}
 
 
     </div>
