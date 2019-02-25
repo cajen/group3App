@@ -20,8 +20,10 @@ router.addRecording = function(req, res) {
     'id' : num
   };
 
+  let instName = req.query.instName;
+
   console.log(recording);
   data.recordingsPlaceholder.push(recording);
-  res.render('recordings', data);
+  res.render('recordingPage', {'instName' : instName});
 }
 module.exports = router;
