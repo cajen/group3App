@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Start Recording</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/roundbutton.css" rel="stylesheet">
+  <script src="/js/holder.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135121545-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135121545-1');
+  </script>
+
+</head>
+
+<body class="text-center">
+
+  <div class="container containerPad">
+    <img class="img" src="holder.js/206x206?text={{instName}}">
+  </div>
+
+  {{!-- <div class="container" id="contId2">
+    <button id="strBtn" type="button" class="btn btn-success btn-lg" data-name='8' style="margin-top:70%">Start</button>
+  </div> --}}
+
+  <div class="container" id="contId">
+    <button id="startBtn" type="button" class="btn btn-danger btn-lg" data-name='4'>Record</button>
+  </div>
+
+  <audio id="audioCont" controls style="margin-bottom: 5% ; margin-top: 5%"></audio>
+
+
+  <div class="container" id="save">
+    <button id="resetBtn" type="button" class="btn btn-danger btn-lg" data-name='9'>Delete</button>
+    <button id="saveBtn" type="button" class="btn btn-success btn-lg" data-name='6' data-target="#exampleModal"
+      data-toggle="modal">Save</button>
+  </div>
+
+  <div id="tutModal" class="modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Tutorial</h4>
+          
+        </div>
+        <div class="modal-body">
+          <p>Shake to make noise.</p>
+          <p>The faster you shake,</p>
+          <p>the faster the sound.</p>
+          <p>Click the &times; below to close.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Save Recording</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input id="recordName" type="text" class="form-control" placeholder="Recording name" aria-label="recordName"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="modal-footer">
+          <button id="modClose" type="button" class="btn btn-danger modBtn" data-dismiss="modal">Delete</button>
+          <button id="modSave" type="button" class="btn btn-success modBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <form style="display: hidden" action="/addRecording" method="get" id="form">
+    <input type="hidden" id="title" name="title" value="" />
+    <input type="hidden" id="recURL" name="recURL" value="" />
+    <input type="hidden" id="date" name="date" value="" />
+    <input type="hidden" id="length" name="length" value="" />
+    <input type="hidden" id="instName" name="instName" value="{{instName}}" />
+  </form>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container text-center">
+      <button type="button" class="btn btn-info navbar-btn Fbtn" title="back" data-name="0">Back</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="home" data-name="1">Home</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="2">My
+        Recordings</button>
+      {{!-- <button type="button" class="btn btn-default navbar-btn Fbtn" title="profile" data-name="3">Profile</button> --}}
+    </div>
+  </nav>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" data-inst="{{instName}}" src="/js/accelerometer2.js"></script>
+  <script src="/js/jquery.firstVisitPopup.js"></script>
+</body>
+
+</html>

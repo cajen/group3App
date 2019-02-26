@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Instrument Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
+        crossorigin="anonymous">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/instPage.css" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135121545-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-135121545-1');
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">{{instName}}</text>
+                    </svg>
+                    <div class="card-body">
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <div class="btn-group">
+                                <a class="btn btn-lg btn-outline-secondary" href="/recordingPage_B/{{instName}}">Play</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="tutBtn" type="button" class="btn btn-info" data-toggle="modal" data-target="#tutModal">Tutorial</button>
+            <button id="infoBtn" type="button" class="btn btn-info" onclick="instInfo()">More Info</button>
+        </div>
+            
+        <div class="instInfo">
+            <h4>Name:</h4>
+            <p>{{instName}}</p>
+        </div>
+
+        <div class="instInfo">
+            <h4>Origin:</h4>
+            <p>origin</p>
+        </div>
+
+        <div id="infoDisplay">
+            <p>{{mInfo}}</p>
+        </div>
+
+    </div>
+
+
+
+    <div id="tutModal" class="modal hide" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Tutorial</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    
+                </div>
+                <div class="modal-body">
+                    <p>Shake to make noise.</p>
+                    <p>The faster you shake,</p>
+                    <p>the faster the sound.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container text-center">
+            {{!-- <noscript>
+                <a type="button" class="btn btn-default navbar-btn" href="/" title="back" data-name="0">Back</a>
+                <a type="button" class="btn btn-default navbar-btn" href="/" title="home" data-name="1">Home</a>
+                <a type="button" class="btn btn-default navbar-btn" href="/recordings" title="recordings" data-name="2">My
+                    Recordings</a>
+                <a type="button" class="btn btn-default navbar-btn" href="/profile" title="profile" data-name="3">Profile</a>
+            </noscript> --}}
+            <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
+            <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
+            <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
+
+        </div>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+        crossorigin="anonymous"></script>
+    <script src="/js/instrument.js"></script>
+</body>
+
+</html>
