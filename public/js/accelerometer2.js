@@ -2,18 +2,14 @@
 
 var thisScript = $('script[src*=accelerometer2]');
 var instName = thisScript.attr('data-inst');
-//alert(instName);
 
 // create web audio api context
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var chunks = [];
-// var ac = new AudioContext();
-// var osc = ac.createOscillator();
 var dest = audioCtx.createMediaStreamDestination();
 var mediaRecorder = new MediaRecorder(dest.stream);
-// osc.connect(dest);
 
 let yodelBuffer;
 
@@ -58,11 +54,11 @@ function initializePage() {
   };
 
   start();
-  $('#startBtn').hide();
+  
+  $('#startBtn').attr('disabled', 'disabled');
   $('#save').hide();
   $('#audioCont').hide();
   $('.Fbtn').click(btnClick);
-  console.log("Javascript connected!");
 
   $('#modClose').click(function() {
     window.location.href = `/recordingPage/${instName}`;
@@ -99,26 +95,9 @@ function initializePage() {
     }
   });
 
-  $('#strBtn').click(function() {
-    $('#contId2').hide();
-    $('.containerPad').show();
+  $('#resetBtn').click(function() {
+    window.location.href = `/recordingPage/${instName}`;
   });
-
-  // $('#startBtn').click(function(event) {
-  //   if (!clicked) {
-  //     mediaRecorder.start()
-  //     $(this).html('Stop');
-  //     $(this).attr('data-target', '#exampleModal');
-  //     clicked = true;
-  //   } else {
-  //     $(this).html('Start');
-  //     // $(this).hide();
-  //     mediaRecorder.requestData();
-  //     mediaRecorder.stop();
-  //     source.stop();
-  //     clicked = false;
-  //   }
-  // });
 }
 
 function handleMotion(event) {
@@ -148,7 +127,7 @@ function handleMotion(event) {
     if (timeDiff > timeout) {
 
       if (firstShake) {
-        $('#startBtn').show();
+        $('#startBtn').removeAttr('disabled');
         firstShake = false;
       }
       var source = audioCtx.createBufferSource();
@@ -169,14 +148,15 @@ function handleMotion(event) {
 mediaRecorder.ondataavailable = function(evt) {
   // push each chunk (blobs) in an array
   chunks.push(evt.data);
-};
+}
+
 mediaRecorder.onstop = function(evt) {
   // Make blob out of our blobs, and open it.
   var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
   var audioTag = document.createElement('audio');
   document.querySelector("audio").src = URL.createObjectURL(blob);
   //alert(URL.createObjectURL(blob));
-};
+}
 
 function stop() {
   window.removeEventListener('devicemotion', handleMotion, true);
@@ -196,17 +176,5 @@ function btnClick(e) {
       case 2:
           window.location.href = '/recordings';
           break;
-      case 3:
-          window.location.href = '/profile';
-          break;
-      // case 4:
-      //     $("#startButton").hide();
-
-      //     $("#stopButton").show();
-      //     break;
-      // case 5:
-      //     $("#stopButton").hide();
-      //     $("#startButton").show();
-      //     break;
   };
 }

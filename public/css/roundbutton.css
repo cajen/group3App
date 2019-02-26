@@ -9,7 +9,7 @@
 
 }
 .containerPad {
-	display: none;
+	/* display: none; */
 	margin-top: 35%;
 }
 .img{
@@ -28,9 +28,11 @@
 
 #startBtn{
 	margin-top: 7%;
-	display: none;
+	/* display: none; */
 }
-
+#audioCont {
+	/* display: none; */
+}
 .save {
 	display: none;
 }
