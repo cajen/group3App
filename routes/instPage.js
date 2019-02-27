@@ -11,9 +11,11 @@ router.get('/:name', function(req, res, next) {
   });
   var instInfo = data.instruments[instIndex].moreInfo;
 
+  data['altView'] = false;
   res.render('instPage', {
     'instName' : nm,
-    'mInfo' : instInfo
+    'mInfo' : instInfo, 
+    'altView' : false
   });
 });
 

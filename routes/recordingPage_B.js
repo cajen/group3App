@@ -5,8 +5,9 @@ var data = require('../data.json');
 /* GET home page. */
 router.get('/:name', function(req, res, next) {
   var nm = req.params.name;
-  res.render('recordingPage_B',{
-    "instName" : nm
+  res.render('recordingPage',{
+    "instName" : nm,
+    'altView' : true
   });
 });
 
@@ -24,6 +25,9 @@ router.addRecording = function(req, res) {
 
   console.log(recording);
   data.recordingsPlaceholder.push(recording);
-  res.render('recordingPage_B', {'instName' : instName});
+  res.render('recordingPage', {
+    'instName' : instName,
+    'altView' : false
+  });
 }
 module.exports = router;

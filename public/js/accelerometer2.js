@@ -40,6 +40,11 @@ $(document).ready(function () {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+
+  $('#modSave').click( function() {
+    ga("send", "event", 'save', 'click');
+  });
+
   function reset() {
     oldTime = new Date();
     oldX = null;
