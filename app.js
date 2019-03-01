@@ -49,7 +49,7 @@ app.use('/test2', test2PageRouter);
 app.use('/home', homePageRouter);
 app.use('/addUser', indexRouter.addUser);
 
-app.get('/delete', deleteR.deleteRec);
+app.use('/delete', deleteR);
 app.use('/addRecording',recordingPageRouter.addRecording);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -52,7 +52,7 @@
                                 <p class="rec-to-del">You are about to delete {{title}}.</p>
                             </div>
                             <div class="modal-footer">
-                                <a href="/delete?id={{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
+                                <a href="/delete/{{id}}" type="button" class="btn btn-danger confirmDel" data-del={{id}}>Delete</a>
                                 
                                 <a type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
                             </div>
@@ -90,9 +90,9 @@
                         <h4 class="modal-title">{{title}}</h4>
                     </div>
                     <div class="modal-body">
-                        <audio controls id="modal-aud">
+                        <audio controls id="modal-aud" type="audio/ogg; codecs=opus">
                             <p>Placeholder Audio Test</p>
-                            <source src="" type="audio/ogg">
+                            {{!-- <source src="" type="audio/ogg"> --}}
                         </audio>
                     </div>
                     <!--    moved delete function to button
@@ -112,7 +112,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -120,7 +120,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
         crossorigin="anonymous"></script>
-    <script src="js/myRec.js"></script>
+    <script src="/js/myRec.js"></script>
 
 </body>
 

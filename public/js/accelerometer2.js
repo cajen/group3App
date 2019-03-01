@@ -95,7 +95,7 @@ function initializePage() {
       
       mediaRecorder.requestData();
       mediaRecorder.stop();
-      source.stop();
+      //source.stop();
       clicked = false;
     }
   });
@@ -157,9 +157,9 @@ mediaRecorder.ondataavailable = function(evt) {
 
 mediaRecorder.onstop = function(evt) {
   // Make blob out of our blobs, and open it.
-  var blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
-  var audioTag = document.createElement('audio');
-  document.querySelector("audio").src = URL.createObjectURL(blob);
+  // let blob = new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' });
+  //var audioTag = document.createElement('audio');
+  document.querySelector("audio").src = URL.createObjectURL(new Blob(chunks, { 'type' : 'audio/ogg; codecs=opus' }));
   //alert(URL.createObjectURL(blob));
 }
 
