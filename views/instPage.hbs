@@ -115,24 +115,25 @@
                 </div>
             </div>
         </div>
-        <div>
-            <button id="tutBtn" type="button" class="btn btn-info" data-toggle="modal"
+        <div class="text-center">
+            <button id="tutBtn" type="button" class="btn btn-info pull-left" data-toggle="modal"
                 data-target="#tutModal">Tutorial</button>
             <button id="infoBtn" type="button" class="btn btn-info" onclick="instInfo()">More Info</button>
-        </div>
 
-        <div class="instInfo">
-            <h4>Name:</h4>
-            <p>{{instName}}</p>
-        </div>
+            <span class="instInfo">
+                <h4>Name:</h4>
+                <p>{{instName}}</p>
+            </span>
 
-        <div class="instInfo">
-            <h4>Origin:</h4>
-            <p>origin</p>
-        </div>
+            <div class="instInfo">
+                <h4>Origin:</h4>
+                <p>origin</p>
+            </div>
 
-        <div id="infoDisplay">
-            <p>{{mInfo}}</p>
+            <div id="infoDisplay">
+                <p>{{mInfo}}</p>
+            </div>
+
         </div>
 
     </div>
@@ -143,7 +144,7 @@
         <div class="modal-dialog modal-dialog-centered modal-sm">
 
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header text-center">
                     <h4>Tutorial</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 

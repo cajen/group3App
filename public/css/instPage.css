@@ -25,6 +25,10 @@
 	text-align: center;
 }
 
+.instInfo#iI1 {
+	display: inline-block;
+}
+
 .instInfo h4 {
 	display: inline;
 }
@@ -36,4 +40,8 @@
 #infoDisplay {
 	display: none;
 	padding-bottom: 75px;
+}
+
+.btn-outline-secondary {
+	border-color: #6c757d;
 }

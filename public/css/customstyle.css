@@ -1,8 +1,8 @@
-.home-container {
+/* .home-container {
     height: 100vh;
     margin: 0;
     position: relative;
-}
+} */
 
 .homeS-buttons {
     position: absolute;
@@ -12,13 +12,14 @@
 }
 
 .homeS-buttons button {
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     background-color: white;
-    margin: 5vh auto;
-    margin-bottom: 15vh;
-    width: 50vw;
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+    width: 55vw;
     display: block;
+    border-radius: 10px;
 }
 
 .row {

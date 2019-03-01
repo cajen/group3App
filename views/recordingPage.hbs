@@ -10,7 +10,11 @@
   <title>Start Recording</title>
 
   <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+
   <link href="/css/roundbutton.css" rel="stylesheet">
   <script src="/js/holder.min.js"></script>
   {{> googleAnalytics}}
@@ -40,19 +44,20 @@
       data-toggle="modal">Save</button>
   </div>
 
-  <div id="tutModal" class="modal" role="dialog" tabindex="-1">
+  <div id="tutModal" class="modal" role="document" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-sm">
         
       <div class="modal-content">
         <div class="modal-header">
-          <h4>Tutorial</h4>
-          
+          <h4 class=" text-center col-12 modal-title">
+            Tutorial
+            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </h4>
         </div>
         <div class="modal-body">
           <p>Shake to make noise.</p>
           <p>The faster you shake,</p>
           <p>the faster the sound.</p>
-          <p>Click the &times; below to close.</p>
         </div>
       </div>
     </div>
