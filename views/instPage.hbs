@@ -39,29 +39,32 @@
                 </div>
             </div>
         </div>
-        <div>
-            <button id="tutBtn" type="button" class="btn btn-info" data-toggle="modal"
+
+
+        <div class="text-center">
+            <button id="tutBtn" type="button" class="btn btn-info pull-left" data-toggle="modal"
                 data-target="#tutModal">Tutorial</button>
             <button id="infoBtn" type="button" class="btn btn-info" onclick="instInfo()">More Info</button>
-        </div>
 
-        <div class="instInfo">
-            <h4>Name:</h4>
-            <p>{{instName}}</p>
-        </div>
+            <span class="instInfo">
+                <h4>Name:</h4>
+                <p>{{instName}}</p>
+            </span>
 
-        <div class="instInfo">
-            <h4>Origin:</h4>
-            <p>TEST!!!!!!!</p>
-        </div>
+            <div class="instInfo">
+                <h4>Origin:</h4>
+                <p>TEST!!!!!!!</p>
+            </div>
 
-        <div id="infoDisplay">
-            <p>{{mInfo}}</p>
+            <div id="infoDisplay">
+                <p>{{mInfo}}</p>
+            </div>
+
         </div>
 
     </div>
 
-
+        
 
     <div id="tutModal" class="modal hide" role="dialog" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-sm">
