@@ -2,6 +2,30 @@
 <html lang="en">
 
 <head>
+  <!-- Google Analytics Content Experiment code -->
+  <script>function utmx_section() { } function utmx() { } (function () {
+      var
+      k = '190298433-1', d = document, l = d.location, c = d.cookie;
+      if (l.search.indexOf('utm_expid=' + k) > 0) return;
+      function f(n) {
+        if (c) {
+          var i = c.indexOf(n + '='); if (i > -1) {
+            var j = c.
+              indexOf(';', i); return escape(c.substring(i + n.length + 1, j < 0 ? c.
+                length : j))
+          }
+        }
+      } var x = f('__utmx'), xx = f('__utmxx'), h = l.hash; d.write(
+        '<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
+          '://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
+        '&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().
+          valueOf() + (h ? '&utmxhash=' + escape(h.substr(1)) : '') +
+        '" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')
+    })();
+  </script>
+  <script>utmx('url', 'A/B');</script>
+  <!-- End of Google Analytics Content Experiment code -->
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -11,7 +35,7 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
-        integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 
@@ -22,7 +46,7 @@
 
 <body class="text-center">
 
-{{#if altView}}
+  {{#if altView}}
   <div class="container containerPad">
     <img class="img" data-src="holder.js/206x206?text={{instName}}">
   </div>
@@ -46,12 +70,13 @@
 
   <div id="tutModal" class="modal" role="document" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-sm">
-        
+
       <div class="modal-content">
         <div class="modal-header">
           <h4 class=" text-center col-12 modal-title">
             Tutorial
-            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal"
+              aria-hidden="true">&times;</button>
           </h4>
         </div>
         <div class="modal-body">
@@ -84,7 +109,7 @@
       </div>
     </div>
   </div>
-{{else}}
+  {{else}}
   <div class="container containerPad">
     <img class="img" src="holder.js/206x206?text={{instName}}">
   </div>
@@ -127,7 +152,7 @@
       </div>
     </div>
   </div>
-{{/if}}
+  {{/if}}
 
   <form style="display: hidden" action="/addRecording" method="get" id="form">
     <input type="hidden" id="title" name="title" value="" />
