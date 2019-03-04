@@ -41,9 +41,9 @@ $(document).ready(function () {
  */
 function initializePage() {
 
-  $('#modSave').click( function() {
-    ga("send", "event", 'save', 'click');
-  });
+  // $('#modSave').click( function() {
+  //   ga("send", "event", 'save', 'click');
+  // });
 
   function reset() {
     oldTime = new Date();
@@ -85,6 +85,8 @@ function initializePage() {
 
   $(document).on('click', '#startBtn', function () {
     if (!clicked) {
+      let timeSincePageLoad = Math.round(performance.now());
+      ga('send', 'timing', 'JS Dependencies', 'click', timeSincePageLoad);
       mediaRecorder.start()
       $(this).html('Stop');
       clicked = true;
