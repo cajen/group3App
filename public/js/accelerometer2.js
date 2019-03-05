@@ -85,7 +85,8 @@ function initializePage() {
 
   $(document).on('click', '#startBtn', function () {
     if (!clicked) {
-      let timeSincePageLoad = Math.round(performance.now());
+      var timeSincePageLoad = Math.round(performance.now());
+      console.log(timeSincePageLoad);
       ga('send', 'timing', 'JS Dependencies', 'click', timeSincePageLoad);
       mediaRecorder.start()
       $(this).html('Stop');
