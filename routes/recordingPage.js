@@ -13,12 +13,14 @@ router.get('/:name', function(req, res, next) {
 
 router.addRecording = function(req, res) {
   let num = Math.floor((Math.random() * 10) + 1);
+  var d = new Date();
+  var uniqueID = (d.getMilliseconds() * Math.random()).toString(36).substr(3);
   let recording = {
     'title' : req.query.title,
     'recUrl' : req.query.recURL,
     'date' : req.query.date,
     'length' : req.query.length,
-    'id' : num
+    'id' : uniqueID
   };
 
   let instName = req.query.instName;

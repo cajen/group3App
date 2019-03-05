@@ -6,7 +6,7 @@ router.get('/:id', function(req, res) {
 	var testVar = req.params.id;
 	console.log(testVar);
 	var recIndex = data.recordingsPlaceholder.findIndex( item => {
-		return item.id === testVar;
+		return item.id == testVar;
 	});
 	console.log(recIndex);
 	data.recordingsPlaceholder.splice(recIndex,1);
