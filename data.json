@@ -2,6 +2,7 @@
     "instruments": [
         {
             "name": "maracas",
+            "origin":"Latin American",
             "description": "An instrument you shake",
             "imageURL": "/images/maracas.png",
             "moreInfo": "Latin American percussion instrument consisting of a hollow-gourd rattle containing pebbles or beans and often played in pairs, as a rhythm instrument Players hold them by their handles, usually in pairs, and shake them. Traditional maracas consist of hollow balls made from dried gourd shell or coconut shell filled with seeds or dried beans and mounted on a wooden handle. Modern maraca balls are also made of leather, wood, or plastic."
@@ -9,6 +10,7 @@
         },
         {
             "name": "conga",
+            "origin":"Cuban",
             "description": "An instrument with two drums heads",
             "imageURL": "/images/conga.png",
             "moreInfo": "The term conga refers to the music groups within Cuban comparsas and the music they play. Comparsas are large ensembles of musicians, singers and dancers with a specific costume and choreography which perform in the street carnivals of Santiago de Cuba and Havana.[1][2]The instrumentation differs between congas santiagueras and congas habaneras. Congas santiagueras include the corneta china (Chinese cornet), which is an adaptation of the Cantonese suona introduced in Oriente in 1915, and its percussion section comprises bocúes (similar to African ashiko drums), the quinto (highest pitched conga drum), galletas and the pilón, as well as brakes which are struck with metal sticks.[1] Congas habaneras lack the corneta china but include trumpets, trombones and saxophones, and they have a different set of percussion instruments: redoblantes (side drums), bombos (bass drums), quinto, tumbadora (the lowest pitched conga drum), and metallic idiophones such as cowbells, spoons, frying pans and rims.[1]Congas and comparsas have a long history which dates back to the 19th century, with musical traditions being passed down from one generation to the next. The older comparsas are derived from cabildos de nación or other social groups, whereas the later ones, called paseos, are derived from barrios (neighbourhoods).[2] The music of the congas has become a genre itself, being introduced into Cuban popular music in the early 20th century by artists such as Eliseo Grenet and Armando Oréfiche and his Havana Cuban Boys.[3] They have been present for decades in the repertoire of many conjuntos, Cuban big bands and descarga ensembles, also having an influence on modern genres such as salsa and songo. The conga drum, also known in Cuba as tumbadora, took its name from the congas de comparsa."
@@ -16,17 +18,18 @@
         },
         {
             "name": "gobletDrum",
+            "origin":"Egypt",
             "description": "An instrument you can hit",
             "imageURL": "/images/gobletDrum.png",
             "moreInfo":"The goblet drum (also chalice drum, tarabuka, tarabaki, darbuka, derbake, debuka, doumbek, dumbec, dumbeg, dumbelek, tablah, tableh, toumperleki or zerbaghali,[1] Arabic: دربوكة / ALA-LC: darbūkah) is a single head membranophone with a goblet shaped body used mostly in Egypt, the Middle East, North Africa, the Levant, South Asia, and Eastern Europe.[2] The African djembe-wassolou is also a goblet membranophone.[3] This article focuses on the Eastern and North-African goblet drum The origin of the Egyptian Arabic term darabukka probably lies in the Arabic word 'darab' ('to strike'). Goblet drums were seen in Babylonia and Sumer. They date from as early as 1100 BCE. On Celebes, one large form serves as a temple instrument, set on the floor when performed, which could be a survival of the ancient use of the drum.[4]"
 
         },
         {
-            "name": "conga",
+            "name": "bar chimes",
+            "origin":"Ameria",
             "description": "An instrument",
-            "imageURL": "/images/conga.png",
-            "moreInfo": "The term conga refers to the music groups within Cuban comparsas and the music they play. Comparsas are large ensembles of musicians, singers and dancers with a specific costume and choreography which perform in the street carnivals of Santiago de Cuba and Havana.[1][2]The instrumentation differs between congas santiagueras and congas habaneras. Congas santiagueras include the corneta china (Chinese cornet), which is an adaptation of the Cantonese suona introduced in Oriente in 1915, and its percussion section comprises bocúes (similar to African ashiko drums), the quinto (highest pitched conga drum), galletas and the pilón, as well as brakes which are struck with metal sticks.[1] Congas habaneras lack the corneta china but include trumpets, trombones and saxophones, and they have a different set of percussion instruments: redoblantes (side drums), bombos (bass drums), quinto, tumbadora (the lowest pitched conga drum), and metallic idiophones such as cowbells, spoons, frying pans and rims.[1]Congas and comparsas have a long history which dates back to the 19th century, with musical traditions being passed down from one generation to the next. The older comparsas are derived from cabildos de nación or other social groups, whereas the later ones, called paseos, are derived from barrios (neighbourhoods).[2] The music of the congas has become a genre itself, being introduced into Cuban popular music in the early 20th century by artists such as Eliseo Grenet and Armando Oréfiche and his Havana Cuban Boys.[3] They have been present for decades in the repertoire of many conjuntos, Cuban big bands and descarga ensembles, also having an influence on modern genres such as salsa and songo. The conga drum, also known in Cuba as tumbadora, took its name from the congas de comparsa."
-
+            "imageURL": "/images/bar chimes 2.png",
+            "moreInfo":" In other name:Mark tree. For the glockenspiel-like instrument, see Chime bar. For other similarly named instruments, see Chime. A Mark tree (also known as a chime tree or set of bar chimes) is a percussion instrument used primarily for musical colour. It consists of many small chimes – typically cylinders of solid aluminum or hollow brass tubing 3/8 in diameter – of varying lengths mounted hanging from a bar. The chimes are played by sweeping a finger or stick through the length of the hanging chimes, or the strings that suspend the chimes. They are mounted in pitch order to produce rising or falling glissandos.Unlike tubular bells, another form of chime, the chimes on a Mark tree do not produce a definite pitch, as they produce inharmonic (rather than harmonic) spectra.The mark tree is named after its inventor, studio percussionist Mark Stevens. He devised the instrument in 1967. When he could not come up with a name, percussionist Emil Richards dubbed the instrument the Mark tree.",
         },
         {
             "name": "snareDrum",
