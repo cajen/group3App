@@ -25,11 +25,11 @@
 
         },
         {
-            "name": "bar chimes",
+            "name": "barChimes",
             "origin":"Ameria",
             "description": "An instrument",
-            "imageURL": "/images/bar chimes 2.png",
-            "moreInfo":" In other name:Mark tree. For the glockenspiel-like instrument, see Chime bar. For other similarly named instruments, see Chime. A Mark tree (also known as a chime tree or set of bar chimes) is a percussion instrument used primarily for musical colour. It consists of many small chimes – typically cylinders of solid aluminum or hollow brass tubing 3/8 in diameter – of varying lengths mounted hanging from a bar. The chimes are played by sweeping a finger or stick through the length of the hanging chimes, or the strings that suspend the chimes. They are mounted in pitch order to produce rising or falling glissandos.Unlike tubular bells, another form of chime, the chimes on a Mark tree do not produce a definite pitch, as they produce inharmonic (rather than harmonic) spectra.The mark tree is named after its inventor, studio percussionist Mark Stevens. He devised the instrument in 1967. When he could not come up with a name, percussionist Emil Richards dubbed the instrument the Mark tree.",
+            "imageURL": "/images/pan.png",
+            "moreInfo":" In other name:Mark tree. For the glockenspiel-like instrument, see Chime bar. For other similarly named instruments, see Chime. A Mark tree (also known as a chime tree or set of bar chimes) is a percussion instrument used primarily for musical colour. It consists of many small chimes – typically cylinders of solid aluminum or hollow brass tubing 3/8 in diameter – of varying lengths mounted hanging from a bar. The chimes are played by sweeping a finger or stick through the length of the hanging chimes, or the strings that suspend the chimes. They are mounted in pitch order to produce rising or falling glissandos.Unlike tubular bells, another form of chime, the chimes on a Mark tree do not produce a definite pitch, as they produce inharmonic (rather than harmonic) spectra.The mark tree is named after its inventor, studio percussionist Mark Stevens. He devised the instrument in 1967. When he could not come up with a name, percussionist Emil Richards dubbed the instrument the Mark tree."
         },
         {
             "name": "snareDrum",
