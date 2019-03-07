@@ -10,12 +10,14 @@ router.get('/:name', function(req, res, next) {
 		return item.name === nm;
   });
   var instInfo = data.instruments[instIndex].moreInfo;
+  let instOrigin = data.instruments[instIndex].origin;
 
   data['altView'] = false;
   res.render('instPage', {
     'instName' : nm,
     'mInfo' : instInfo, 
-    'altView' : false
+    'altView' : false,
+    'origin': instOrigin
   });
 });
 
