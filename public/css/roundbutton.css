@@ -1,3 +1,11 @@
+body {
+	background-color: rgb(241, 239, 239);
+}
+h1 {
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	margin-top: 10%;
+}
 .roundbutton{
 	width:20%;
 	height: 100%;
@@ -10,10 +18,19 @@
 }
 .containerPad {
 	/* display: none; */
-	margin-top: 35%;
+	margin-top: 15%;
 }
 .img{
-	width:80%;
+	/* width:80%;
+	box-shadow: 0 30px 40px rgba(0,0,0,.05); */
+
+	border: 1px solid gray;
+	border-radius: 10%; 
+	display: block;
+  	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5%;
+  	width: 60%;
 }
 
 #stopButton{

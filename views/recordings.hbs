@@ -8,11 +8,13 @@
         crossorigin="anonymous">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="/css/customstyle.css" rel="stylesheet">
     {{> googleAnalytics}}
 </head>
 
 <body>
+    <h1>My Recordings</h1>
     <div class="container">
         <div class="recordList">
             <ul>
@@ -67,16 +69,17 @@
         </div>
 
         <!-- Header here to overlay recordings-->
-        <div class="mRHeader">
+        {{!-- <div class="mRHeader">
             <h3>My Recordings</h3>
-        </div>
+        </div> --}}
 
         <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="container text-center">
-                <button class="btn btn-info navbar-btn" onclick="history.back()">Back</button>
+                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/help';">Help</button>
                 <button class="btn btn-default navbar-btn" onclick="window.location.href = '/home';">Home</button>
-                <button class="btn btn-default navbar-btn" onclick="window.location.href = '/instruments';">Instrument
-                    Library</button>
+                <button class="btn btn-info navbar-btn" onclick="history.back()">Back</button>
+                {{!-- <button class="btn btn-default navbar-btn" onclick="window.location.href = '/instruments';">Instrument --}}
+                    {{!-- Library</button> --}}
                 {{!-- <button class="btn btn-default navbar-btn" onclick="window.location.href = '/profile';">Profile</button> --}}
             </div>
         </nav>

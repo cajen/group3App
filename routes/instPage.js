@@ -11,13 +11,15 @@ router.get('/:name', function(req, res, next) {
   });
   var instInfo = data.instruments[instIndex].moreInfo;
   let instOrigin = data.instruments[instIndex].origin;
+  let realName = data.instruments[instIndex].nm;
 
   data['altView'] = false;
   res.render('instPage', {
     'instName' : nm,
     'mInfo' : instInfo, 
     'altView' : false,
-    'origin': instOrigin
+    'origin': instOrigin,
+    'name' : realName
   });
 });
 

@@ -2,7 +2,10 @@ html,
 body {
   height: 100%;
 }
-
+h1{
+  display: block;
+  font-family: 'Lobster', cursive;
+}
 body {
   display: -ms-flexbox;
   display: flex;

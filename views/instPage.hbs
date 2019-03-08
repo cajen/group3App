@@ -9,81 +9,21 @@
         integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="/css/instPage.css" rel="stylesheet">
     {{> googleAnalytics}}
 </head>
 
 <body>
-    {{#if altView}}
-        <img src="/images/{{instName}}.png" class="card-img-top"  style="padding: 20px">
-
-        <div class="btn-group" style="margin-left: 42%">
-            <a class="btn btn-lg btn-outline-secondary" href="/recordingPage/{{instName}}">Play</a>
-        </div>
-        <hr>
-
-        <div class="text-center">
-            <button id="tutBtn" type="button" class="btn btn-info pull-left" data-toggle="modal"
-                data-target="#tutModal">Tutorial</button>
-            <button id="infoBtn" type="button" class="btn btn-info" onclick="instInfo()">More Info</button>
-
-            <span class="instInfo">
-                <h4>Name:</h4>
-                <p>{{instName}}</p>
-            </span>
-
-            <div class="instInfo">
-                <h4>Origin:</h4>
-                <p>TEST!!!!!!!</p>
-            </div>
-
-            <div id="infoDisplay">
-                <p>{{mInfo}}</p>
-            </div>
-
-        </div>
-
-    </div>
-
-        
-
-    <div id="tutModal" class="modal hide" role="dialog" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4>Tutorial</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
-                </div>
-                <div class="text-center modal-body">
-                    <p>Shake your phone to make sound.</p>
-                    <p>The faster you shake,</p>
-                    <p>the faster the sound.</p>
-                     <p> Enjoy making the music!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container text-center">
-            <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
-            <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
-            <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My
-                Recordings</button>
-
-        </div>
-    </nav>
-    {{else}}
+    <h1>{{name}}</h1>
     <div class="container">
 
-        <img src="/images/{{instName}}.png" class="card-img-top"  style="padding: 20px">
-
-        <div class="btn-group" style="margin-left: 40%">
+        <img src="/images/{{instName}}.jpg">
+        
+        <div class="btn-group" style="margin-left: 40%; margin-bottom: 4%">
             <a class="btn btn-lg btn-primary" href="/recordingPage/{{instName}}">Start</a>
         </div>
-        <hr>
+
         <div class="text-center">
             <button id="tutBtn" type="button" class="btn btn-info pull-left" data-toggle="modal"
                 data-target="#tutModal">Tutorial</button>
@@ -130,14 +70,13 @@
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container text-center">
-            <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
+            <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="20">Help</button>
+            <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My Recordings</button>
             <button type="button" class="btn btn-default navbar-btn" title="home" data-name="1">Home</button>
-            <button type="button" class="btn btn-default navbar-btn" title="recordings" data-name="2">My
-                Recordings</button>
-
+            <button type="button" class="btn btn-info navbar-btn" title="back" data-name="0">Back</button>
         </div>
     </nav>
-    {{/if}}
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

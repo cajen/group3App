@@ -48,6 +48,9 @@ function btnClick(e) {
         case 4:
             window.alert("Search doesn't work yet. Please enjoy the instruments available on this sceen.");
             break;
+        case 20:
+            window.location.href = "/help";
+            break;
     }
 }
 

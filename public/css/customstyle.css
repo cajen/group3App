@@ -3,7 +3,13 @@
     margin: 0;
     position: relative;
 } */
-
+body {
+    background-color: rgb(241, 239, 239);
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
 .homeS-buttons {
     position: absolute;
     top: 50%;
@@ -35,6 +41,7 @@
 }
 
 .mRHeader {
+    font-family: 'Lobster', cursive;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -56,8 +63,8 @@
 }
 
 .recordList {
-    padding-top: 40px;
-    padding-bottom: 75px;
+    /* padding-top: 40px; */
+    /* padding-bottom: 75px; */
 }
 
 .recordList ul {

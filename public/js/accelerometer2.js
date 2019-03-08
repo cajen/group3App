@@ -179,10 +179,13 @@ function btnClick(e) {
           window.history.back();
           break;
       case 1:
-          window.location.href = '/';
+          window.location.href = '/home';
           break;
       case 2:
           window.location.href = '/recordings';
+          break;
+      case 20:
+          window.location.href = "/help";
           break;
   };
 }

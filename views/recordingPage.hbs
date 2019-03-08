@@ -29,7 +29,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="/css/roundbutton.css" rel="stylesheet">
   <script src="/js/holder.min.js"></script>
   {{> googleAnalytics}}
@@ -37,72 +37,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 <body class="text-center">
 
-  {{#if altView}}
+  <h1>Shake!</h1>
+  
   <div class="container containerPad">
-    <img class="img" src="/images/{{instName}}.png">
-  </div>
-
-  {{!-- <div class="container" id="contId2">
-    <button id="strBtn" type="button" class="btn btn-success btn-lg" data-name='8' style="margin-top:70%">Start</button>
-  </div> --}}
-
-  <div class="container" id="contId">
-    <button id="startBtn" type="button" class="btn btn-danger btn-lg" data-name='4'>Record</button>
-  </div>
-
-  <audio id="audioCont" controls style="margin-bottom: 5% ; margin-top: 5%"></audio>
-
-
-  <div class="container" id="save">
-    <button id="resetBtn" type="button" class="btn btn-danger btn-lg" data-name='9'>Delete</button>
-    <button id="saveBtn" type="button" class="btn btn-success btn-lg" data-name='6' data-target="#exampleModal"
-      data-toggle="modal">Save</button>
-  </div>
-
-  <div id="tutModal" class="modal" role="document" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class=" text-center col-12 modal-title">
-            Tutorial
-            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal"
-              aria-hidden="true">&times;</button>
-          </h4>
-        </div>
-        <div class="modal-body">
-          <p>Shake to make noise.</p>
-          <p>The faster you shake,</p>
-          <p>the faster the sound.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Save Recording</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <input id="recordName" type="text" class="form-control" placeholder="Recording name" aria-label="recordName"
-            aria-describedby="basic-addon1">
-        </div>
-        <div class="modal-footer">
-          <button id="modClose" type="button" class="btn btn-danger modBtn" data-dismiss="modal">Delete</button>
-          <button id="modSave" type="button" class="btn btn-success modBtn">Save</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  {{else}}
-  <div class="container containerPad">
-    <img class="img" src="/images/{{instName}}.png">
+    <img class="img" src="/images/{{instName}}.jpg">
   </div>
 
   {{!-- <div class="container" id="contId2">
@@ -143,6 +81,26 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
       </div>
     </div>
   </div>
+
+  <div id="tutModal" class="modal" role="document" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class=" text-center col-12 modal-title">
+            Tutorial
+            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal"
+              aria-hidden="true">&times;</button>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p>Shake to make noise.</p>
+          <p>The faster you shake,</p>
+          <p>the faster the sound.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-body">
@@ -150,8 +108,6 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
       <button>Delete</button>
     </div>
   </div>
-
-  {{/if}}
 
   <form style="display: hidden" action="/addRecording" method="get" id="form">
     <input type="hidden" id="title" name="title" value="" />
@@ -163,10 +119,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container text-center">
-      <button type="button" class="btn btn-info navbar-btn Fbtn" title="back" data-name="0">Back</button>
-      <button type="button" class="btn btn-default navbar-btn Fbtn" title="home" data-name="1">Home</button>
-      <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="2">My
-        Recordings</button>
+            <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="20">Help</button>
+            <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="2">My Recordings</button>
+            <button type="button" class="btn btn-default navbar-btn Fbtn" title="home" data-name="1">Home</button>
+            <button type="button" class="btn btn-info navbar-btn Fbtn" title="back" data-name="0">Back</button>
       {{!-- <button type="button" class="btn btn-default navbar-btn Fbtn" title="profile" data-name="3">Profile</button> --}}
     </div>
   </nav>
