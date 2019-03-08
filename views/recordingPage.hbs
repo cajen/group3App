@@ -2,20 +2,29 @@
 <html lang="en">
 
 <head>
-<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='190298433-4',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
+  <!-- Google Analytics Content Experiment code -->
+  <script>function utmx_section() { } function utmx() { } (function () {
+      var
+      k = '190298433-4', d = document, l = d.location, c = d.cookie;
+      if (l.search.indexOf('utm_expid=' + k) > 0) return;
+      function f(n) {
+        if (c) {
+          var i = c.indexOf(n + '='); if (i > -1) {
+            var j = c.
+              indexOf(';', i); return escape(c.substring(i + n.length + 1, j < 0 ? c.
+                length : j))
+          }
+        }
+      } var x = f('__utmx'), xx = f('__utmxx'), h = l.hash; d.write(
+        '<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
+          '://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
+        '&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().
+          valueOf() + (h ? '&utmxhash=' + escape(h.substr(1)) : '') +
+        '" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')
+    })();
+  </script>
+  <script>utmx('url', 'A/B');</script>
+  <!-- End of Google Analytics Content Experiment code -->
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,7 +47,70 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <body class="text-center">
 
   <h1>Shake!</h1>
-  
+  {{#if altView}}
+  <div class="container containerPad">
+    <img class="img" src="/images/{{instName}}.png">
+  </div>
+
+  {{!-- <div class="container" id="contId2">
+    <button id="strBtn" type="button" class="btn btn-success btn-lg" data-name='8' style="margin-top:70%">Start</button>
+  </div> --}}
+
+  <div class="container" id="contId">
+    <button id="startBtn" type="button" class="btn btn-danger btn-lg" data-name='4'>Record</button>
+  </div>
+
+  <audio id="audioCont" controls style="margin-bottom: 5% ; margin-top: 5%"></audio>
+
+
+  <div class="container" id="save">
+    <button id="resetBtn" type="button" class="btn btn-danger btn-lg" data-name='9'>Delete</button>
+    <button id="saveBtn" type="button" class="btn btn-success btn-lg" data-name='6' data-target="#exampleModal"
+      data-toggle="modal">Save</button>
+  </div>
+
+  <div id="tutModal" class="modal" role="document" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class=" text-center col-12 modal-title">
+            Tutorial
+            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal"
+              aria-hidden="true">&times;</button>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <p>Shake to make noise.</p>
+          <p>The faster you shake,</p>
+          <p>the faster the sound.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Save Recording</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input id="recordName" type="text" class="form-control" placeholder="Recording name" aria-label="recordName"
+            aria-describedby="basic-addon1">
+        </div>
+        <div class="modal-footer">
+          <button id="modClose" type="button" class="btn btn-danger modBtn" data-dismiss="modal">Delete</button>
+          <button id="modSave" type="button" class="btn btn-success modBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{else}}
   <div class="container containerPad">
     <img class="img" src="/images/{{instName}}.jpg">
   </div>
@@ -55,7 +127,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 
   <div class="container" id="save">
-    <button id="resetBtn" type="button" class="btn btn-danger btn-lg" data-name='9' data-target="#warning" data-toggle="modal">Delete</button>
+    <button id="resetBtn" type="button" class="btn btn-danger btn-lg" data-name='9' data-target="#warning"
+      data-toggle="modal">Delete</button>
     <button id="saveBtn" type="button" class="btn btn-success btn-lg" data-name='6' data-target="#exampleModal"
       data-toggle="modal">Save</button>
   </div>
@@ -82,33 +155,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     </div>
   </div>
 
-  <div id="tutModal" class="modal" role="document" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
-
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class=" text-center col-12 modal-title">
-            Tutorial
-            <button type="button" id="closePopup" style="margin-top: -7px" class="close" data-dismiss="modal"
-              aria-hidden="true">&times;</button>
-          </h4>
-        </div>
-        <div class="modal-body">
-          <p>Shake to make noise.</p>
-          <p>The faster you shake,</p>
-          <p>the faster the sound.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
   <div class="modal fade" id="warning" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-body">
       <button>Cancel</button>
       <button>Delete</button>
     </div>
   </div>
-
+  {{/if}}
   <form style="display: hidden" action="/addRecording" method="get" id="form">
     <input type="hidden" id="title" name="title" value="" />
     <input type="hidden" id="recURL" name="recURL" value="" />
@@ -119,10 +172,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container text-center">
-            <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="20">Help</button>
-            <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="2">My Recordings</button>
-            <button type="button" class="btn btn-default navbar-btn Fbtn" title="home" data-name="1">Home</button>
-            <button type="button" class="btn btn-info navbar-btn Fbtn" title="back" data-name="0">Back</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="20">Help</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="recordings" data-name="2">My
+        Recordings</button>
+      <button type="button" class="btn btn-default navbar-btn Fbtn" title="home" data-name="1">Home</button>
+      <button type="button" class="btn btn-info navbar-btn Fbtn" title="back" data-name="0">Back</button>
       {{!-- <button type="button" class="btn btn-default navbar-btn Fbtn" title="profile" data-name="3">Profile</button> --}}
     </div>
   </nav>
@@ -131,7 +185,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   <script type="text/javascript" data-inst="{{instName}}" src="/js/accelerometer2.js"></script>
   <!--<script src="/js/jquery.firstVisitPopup.js"></script>-->
   <script type="text/javascript">
-    $(window).on('load', function() {
+    $(window).on('load', function () {
       $('#tutModal').modal('show');
     });
   </script>

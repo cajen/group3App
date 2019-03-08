@@ -53,3 +53,7 @@ h1 {
 .save {
 	display: none;
 }
+
+#save {
+	margin-bottom: 20%;
+}
