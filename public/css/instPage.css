@@ -64,3 +64,6 @@ img{
 .btn-outline-secondary {
 	border-color: #6c757d;
 }
+.infoDisp {
+	text-align: left;
+}

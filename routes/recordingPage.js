@@ -7,7 +7,7 @@ router.get('/:name', function(req, res, next) {
   var nm = req.params.name;
   res.render('recordingPage',{
     "instName" : nm, 
-    'altView' : false
+    'altView' : true
   });
 });
 
