@@ -5,6 +5,7 @@ h1{
 	font-family: 'Lobster', cursive;
 	text-align: center;
 }
+
 .row {
     margin-top: 40%;
 }
@@ -42,6 +43,7 @@ img{
 
 .instInfo {
 	text-align: center;
+	padding-top: 6px;
 }
 
 .instInfo#iI1 {
@@ -50,6 +52,7 @@ img{
 
 .instInfo h4 {
 	display: inline;
+	font-size: larger;
 }
 
 .instInfo p {
@@ -66,4 +69,7 @@ img{
 }
 .infoDisp {
 	text-align: left;
+}
+hr {
+	border-color: darkgrey;
 }
