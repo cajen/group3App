@@ -1,10 +1,15 @@
+@font-face {
+  font-family: "gravicon";
+  src: url("/fonts/GRAVICD.ttf") format("truetype");
+}
   body {
     /* padding-top: 54px; */
     background-color: rgb(241, 239, 239);
   }
 
   h1 {
-    font-family: 'Lobster', cursive;
+    /* font-family: 'Lobster', cursive; */
+    font-family: 'gravicon';
     text-align: center;
   }
   .aThumb {
